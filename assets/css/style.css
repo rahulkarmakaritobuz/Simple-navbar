@@ -1,0 +1,70 @@
+body {
+  margin: 0;
+  padding: 0;
+}
+.navigation {
+  background-color: rgb(6, 0, 61);
+  color: white;
+  padding: 0.6rem;
+  display: flex;
+
+  justify-content: space-between;
+}
+
+.menu-bar {
+  display: none;
+  align-items: center;
+}
+.menu-bg-toggle {
+  transition: 1s;
+  border-bottom-left-radius: 50%;
+  border-bottom-right-radius: 50%;
+}
+.ul-dropdown-animation {
+  padding: 0;
+  animation-name: navFall;
+  animation-duration: 1s;
+}
+@keyframes navFall {
+  0% {
+    transform: translateY(-100%);
+  }
+  100% {
+    transform: translateY(0%);
+  }
+}
+
+.navigation-menu {
+  list-style: none;
+  margin-top: 1rem;
+}
+
+.navigation-menu a span {
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 2rem;
+  width: 2rem;
+  border: 3px solid greenyellow;
+  border-radius: 50%;
+  display: block;
+}
+.fa-bars {
+  display: block;
+}
+
+@media (min-width: 750px) {
+  .navigation {
+    align-items: center;
+  }
+  .menu-bar {
+    margin: 0;
+    display: block;
+  }
+  .menu-bar .navigation-menu {
+    margin-right: 1rem;
+    float: left;
+  }
+  .fa-bars {
+    display: none;
+  }
+}
